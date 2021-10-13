@@ -1,34 +1,34 @@
 import {
-  FETCH_DATA_ERROR,
-  FETCH_DATA_REQUEST,
-  FETCH_DATA_SUCCESS,
+  FETCH_TOOLS_ERROR,
+  FETCH_TOOLS_REQUEST,
+  FETCH_TOOLS_SUCCESS,
 } from '../../constants/action-types';
 
 const initialState = {
-  weatherInfo: {},
+  toolsInfo: {},
   isLoading: false,
   error: false,
 };
 
-export const getWeatherSelector = (state: Object) => ({ ...state.weather });
+export const getToolsSelector = (state) => ({ ...state.tools });
 
-const weatherReducer = (state: Object = initialState, action: Object) => {
+const toolsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_DATA_SUCCESS: {
+    case FETCH_TOOLS_SUCCESS: {
       return {
         isLoading: false,
         error: false,
-        weatherInfo: action.payload.weatherInfo,
+        toolsInfo: action.payload.toolsInfo,
       };
     }
-    case FETCH_DATA_REQUEST: {
+    case FETCH_TOOLS_REQUEST: {
       return {
         isLoading: true,
         error: false,
-        weatherInfo: {},
+        toolsInfo: {},
       };
     }
-    case FETCH_DATA_ERROR: {
+    case FETCH_TOOLS_ERROR: {
       return {
         ...state,
         isLoading: false,
@@ -41,4 +41,4 @@ const weatherReducer = (state: Object = initialState, action: Object) => {
   }
 };
 
-export default weatherReducer;
+export default toolsReducer;
