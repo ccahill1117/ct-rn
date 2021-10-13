@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { fetchData } from '../../actions/fetch-data/fetch-data';
 
 import {
   ScrollView,
@@ -29,7 +30,7 @@ const HomeScreen = (props) => {
         />
         <Button
           title="Fetch Tools"
-          onPress={() => this.fetchTools()}
+          onPress={() => fetchTools()}
         />
       </ScrollView>
     </SafeAreaView>
