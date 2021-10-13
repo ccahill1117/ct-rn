@@ -3,13 +3,18 @@ import {
   ScrollView,
   StyleSheet,
   SafeAreaView,
+  Button,
 } from 'react-native'
 
 const HomeScreen = (props) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        HOME SCREEN
+        HOME SCREENn
+        <Button
+          title="Details"
+          onPress={() => props.navigation.navigate('Details')}
+        />
       </ScrollView>
     </SafeAreaView>
   )
