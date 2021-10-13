@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchData } from '../../actions/fetch-data/fetch-data';
+import { fetchTools } from '../store/actions/fetch-tools';
 
 import {
   ScrollView,
@@ -16,8 +16,12 @@ const HomeScreen = (props) => {
   const [error, setError] = useState()
   // const dispatch = useDispatch()
 
-  const fetchTools = useCallback(async () => {
-    console.log('hi')
+  // const test = useCallback(async () => {
+  //   console.log('hi')
+  // })
+
+  const fetchTools = (dispatch) => ({
+    fetchTools: () => dispatch(fetchTools()),
   })
 
   return (
