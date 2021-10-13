@@ -2,13 +2,14 @@ import React from 'react'
 import {
   ScrollView,
   SafeAreaView,
+  Text
 } from 'react-native'
 
 const DetailsScreen = (props) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        Details Screen
+        <Text>hi</Text>
       </ScrollView>
     </SafeAreaView>
   )
