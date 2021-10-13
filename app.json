@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "centrotherm_rn",
+    "slug": "centrotherm_rn",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "centrotherm_rn"
+}
