@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchTools } from '../store/actions/fetch-tools';
+import ToolsComponent from '../components/ToolsComponent'
 
 import {
   ScrollView,
@@ -27,15 +28,11 @@ const HomeScreen = (props) => {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Text>uh hiiii</Text>
         <Button
           title="Details"
           onPress={() => props.navigation.navigate('Details')}
         />
-        <Button
-          title="Fetch Tools"
-          onPress={() => fetchTools()}
-        />
+
       </ScrollView>
     </SafeAreaView>
   )

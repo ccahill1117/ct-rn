@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import toolReducer from './tool-reducer';
+import toolReducer from './tools-reducer';
 
 // Root Reducer
 const rootReducer = combineReducers({

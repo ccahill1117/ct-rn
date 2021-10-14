@@ -9,21 +9,18 @@ import configureStore from './store/configureStore';
 import HomeScreen from './screens/HomeScreen'
 import DetailsScreen from './screens/DetailsScreen'
 
+import ToolsContainer from './containers/ToolsContainer'
+
 const Stack = createNativeStackNavigator();
 
+const store = configureStore({});
 
 
 function App() {
   return (
-    // <Provider store={store}>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Details" component={DetailsScreen} />
-
-        </Stack.Navigator>
-      </NavigationContainer>
-    // </Provider>
+    <Provider store={store}>
+      <ToolsContainer/>
+    </Provider>
   );
 }
 

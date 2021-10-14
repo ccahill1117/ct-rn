@@ -10,7 +10,6 @@ let url = () => {
   } else {
     return ''
   }
-
 }
 
 export const ApiUtilities = {
