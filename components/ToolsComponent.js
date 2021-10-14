@@ -6,20 +6,6 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-
-const getToolsInfo = (toolsInfo) => {
-  const { summary, temperature } = toolsInfo;
-  const info = temperature
-    ? `${Math.floor(temperature)} deg, ${summary}`
-    : 'No Weather Info Available. Make sure you provided a valid API key in the `config.js` file.';
-
-  return (
-    <Text>
-      {info}
-    </Text>
-  );
-};
-
 const ToolsComponent = (props) => {
   const {
     isLoading,

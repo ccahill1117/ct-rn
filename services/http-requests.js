@@ -3,7 +3,7 @@ import config from '../lib/config';
 
 export const fetchToolsData = () => (
 
-  fetch(config.API_URL)
+  fetch(`${config.API_URL}/tools`)
     .then((res) => res.json())
     .then((data) => data.currently)
     .catch((err) => err)
